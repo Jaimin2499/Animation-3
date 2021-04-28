@@ -1,0 +1,32 @@
+#sticker {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 300px auto;
+}
+
+.front,
+.reveal {
+    position: absolute;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+.reveal {
+    background-image: url("https://media4.giphy.com/media/JsiCNbPA0hl65o6Ffm/giphy.gif");
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.front {
+    background: white url(https://st2.depositphotos.com/1745098/5878/i/950/depositphotos_58785377-stock-photo-red-start-button.jpg) center no-repeat;
+    background-size: 100px;
+    transition: background-size 0.6s cubic-bezier(.87, -.41, .19, 1.44), opacity 0.5s ease 0.3s;
+}
+
+#sticker.revealed .front {
+    background-size: 250%;
+    opacity: 0;
+}
